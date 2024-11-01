@@ -1,3 +1,4 @@
+#Importing the necessary library for the game module
 import random
 import os.path
 import json
@@ -151,6 +152,10 @@ def save_score(score):
                 players = json.load(file)
         except FileNotFoundError as e:
             print(f"Error is {e}")
+
+    # If the name is new, set the initial score to zero
+    if name not in players:
+        players[name] = 0
 
     # update the players dictionary with the new score
     players.update(score_dict)

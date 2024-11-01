@@ -32,5 +32,6 @@ def main():
             return
     
 # Program execution begins here
+# Ensure the scripts runs the main function only if this file is executed directly.
 if __name__ == '__main__':
     main()
